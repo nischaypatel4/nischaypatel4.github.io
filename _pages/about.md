@@ -2,24 +2,19 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
-
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Ahmedabad, Gujarat, India</p>
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
+Hi! I'm Nischay Patel, a Pre-Final year B.Tech student in Biological Sciences and Bioengineering at IIT Kanpur. My primary interests lie in Genomics, Bioinformatics, and Cognitive Science, where I focus on bridging research with practical applications. I’ve had the privilege of contributing to core research projects at renowned labs such as IIT Gandhinagar’s PMDCB Lab and IIT Kanpur’s Lab of Neural Systems. Additionally, I’m passionate about applying machine learning and data analytics to uncover insights and identify patterns in complex datasets. 
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+When I'm not working, you can find me playing Table Tennis or Cricket. Check out my [publications page](/nischaypatel4.github.io/publications/) and learn more about the exciting [projects](/nischaypatel4.github.io/projects/) I’ve been working on! 
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Feel free to reach out and connect with me!
