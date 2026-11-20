@@ -1,0 +1,50 @@
+Nischay Patel website - hosting instructions
+
+This archive contains the editable Jekyll site, including its assets and
+the original license. It is source code, not a ready-to-upload static build.
+Keep LICENSE and the existing third-party notices when redistributing it.
+
+Before deploying
+1. Extract the archive and open its site folder.
+2. In _config.yml, set url to the final site's HTTPS origin. For a site at
+   the root of a domain, leave baseurl empty. For a site in a subdirectory,
+   set baseurl to that path, for example /portfolio. Check the absolute
+   og_image URL as well if the domain changes.
+3. Keep the _pages, _posts, _data, _bibliography, _includes, _layouts,
+   _plugins, _sass and assets directories together. Do not publish the source
+   directory directly: the hosting provider must serve the generated _site.
+
+Build on Linux or macOS
+Install Ruby 3.3.5 and Bundler, Python 3 with pip, ImageMagick with WebP
+support, and Node.js. Then, from the extracted site folder:
+
+    bundle install
+    python3 -m pip install -r requirements.txt
+    bundle exec jekyll build
+
+Upload the contents of the resulting _site directory to a static web host.
+The first build may take time because it generates responsive images and may
+download third-party assets. The production build must finish successfully
+before deploying. On Windows, use WSL or the Docker setup in INSTALL.md.
+
+GitHub Pages
+1. Put the contents of the extracted site folder at the repository root.
+   Include the hidden .github directory and Gemfile.lock. If replacing a
+   previous upload, overwrite .github/workflows/deploy.yml.
+2. In Settings > Pages > Build and deployment, set Source to GitHub Actions.
+   Do not select "Deploy from a branch": that builder does not support the
+   {% toc %} and bibliography plugins and cannot build this site.
+3. Push to main or master, or open Actions > Deploy site > Run workflow
+   after the workflow is committed. It builds with the locked Jekyll gems,
+   uploads the generated files, and deploys them. No gh-pages branch is needed.
+4. Open the published URL shown in Actions or Settings > Pages. The workflow
+   sets the base path for GitHub Pages; set url in _config.yml to the final
+   HTTPS origin, especially if using a different account or custom domain.
+
+The original INSTALL.md contains more deployment options. The site includes
+third-party scripts and assets; their availability and terms should be
+reviewed by the person hosting it.
+
+To keep this archive small, an unused template tutorial video and an
+unreferenced duplicate of a publication image were omitted. The publication
+image used by the site remains under assets/img/publication_preview/.

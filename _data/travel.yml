@@ -1,0 +1,56 @@
+sample: false
+places:
+  - id: china
+    name: China
+    latitude: 35.8617
+    longitude: 104.1954
+    photos:
+      - file: china-1.png
+        alt: Amgen Scholars group at Tsinghua University
+      - file: china-2.png
+        alt: Nischay at the Great Wall of China
+      - file: china-3.png
+        alt: View of the Great Wall of China
+  - id: kanpur
+    name: Kanpur, India
+    latitude: 26.4499
+    longitude: 80.3319
+    photos:
+      - file: kanpur-1.png
+        alt: Nischay at an IIT Kanpur convocation ceremony
+      - file: kanpur-2.png
+        alt: Nischay with faculty at an IIT Kanpur ceremony
+  - id: japan
+    name: Japan
+    latitude: 36.2048
+    longitude: 138.2529
+    photos:
+      - file: japan-1.png
+        alt: Nischay beside a research poster at a symposium
+      - file: japan-2.png
+        alt: Group photograph in Japan
+  - id: meghalaya
+    name: Meghalaya
+    latitude: 25.467
+    longitude: 91.3662
+    photos: []
+  - id: brahmatal
+    name: Brahmatal, Uttarakhand
+    latitude: 30.133
+    longitude: 79.8
+    photos: []
+  - id: dehradun
+    name: Dehradun
+    latitude: 30.3165
+    longitude: 78.0322
+    photos: []
+  - id: ahmedabad
+    name: Ahmedabad
+    latitude: 23.0225
+    longitude: 72.5714
+    photos: []
+  - id: bangalore
+    name: Bangalore
+    latitude: 12.9716
+    longitude: 77.5946
+    photos: []

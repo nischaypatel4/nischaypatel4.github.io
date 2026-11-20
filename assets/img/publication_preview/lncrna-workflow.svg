@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <title>RNA-seq workflow overview</title>
+  <rect width="360" height="240" fill="#f2f7f3"/>
+  <g fill="none" stroke="#236449" stroke-width="3">
+    <path d="M40 45C105 45 45 115 110 115M40 115C105 115 45 45 110 45"/>
+    <path d="M52 55H98M57 70H93M57 90H93M52 105H98" stroke-width="2"/>
+    <path d="M128 80H176M166 72L176 80 166 88"/>
+    <path d="M242 80L293 48M242 80L295 112M293 48L321 82M295 112L321 82"/>
+  </g>
+  <g fill="#236449">
+    <circle cx="235" cy="80" r="12"/><circle cx="297" cy="46" r="8"/>
+    <circle cx="298" cy="117" r="8"/><circle cx="326" cy="82" r="8"/>
+  </g>
+  <g font-family="Arial,sans-serif" font-size="17" fill="#25332e" text-anchor="middle">
+    <text x="77" y="159">RNA-seq</text><text x="275" y="159">Regulation</text>
+    <text x="180" y="210" font-size="12" fill="#5d6a64">Conceptual workflow, not experimental results</text>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+---
+---
+<article class="research-highlight">
+  {% if entry.preview %}
+    <a class="research-highlight-image" href="https://doi.org/{{ entry.doi }}" aria-label="Read {{ entry.title | escape }}">
+      <img
+        src="{{ entry.preview | prepend: '/assets/img/publication_preview/' | relative_url }}"
+        alt="{{ entry.website_image_alt | default: entry.title | escape }}"
+        loading="lazy"
+        width="180"
+        height="120"
+      >
+    </a>
+  {% endif %}
+  <div>
+    <p class="research-highlight-venue">{{ entry.journal }} &middot; {{ entry.year }}</p>
+    <h3>
+      <a href="https://doi.org/{{ entry.doi }}">{{ entry.title }}</a>
+    </h3>
+    <p>{{ entry.website_summary }}</p>
+    <div class="research-highlight-links">
+      <a href="https://doi.org/{{ entry.doi }}">Read paper <span aria-hidden="true">&#8599;</span></a>
+      {% if entry.code -%}
+        <a href="{{ entry.code }}">Code <span aria-hidden="true">&#8599;</span></a>
+      {%- endif %}
+    </div>
+  </div>
+</article>

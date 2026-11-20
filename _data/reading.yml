@@ -1,0 +1,11 @@
+sample: true
+entries:
+  - month: June 2025
+    title: Scanpy tutorials for single-cell RNA-seq
+    type: Guide
+    url: https://scanpy.readthedocs.io/en/stable/tutorials/index.html
+    note: Demo resource for single-cell preprocessing, clustering, and analysis.
+    recommended: true
+    tags:
+      - scRNA-seq
+      - single-cell

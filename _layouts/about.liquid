@@ -1,0 +1,56 @@
+---
+layout: default
+---
+<!--
+  THESIS: A compact academic profile puts verified research before decoration.
+  OWN-WORLD: White paper, botanical-green links, system type, plain research rows.
+  STORY: Understand Nischay's methods, inspect the work, then explore the complete record.
+  FIRST VIEWPORT: Name and biography left, portrait right; email below the biography.
+  FORM: Brief-pinned academic convention, independently implemented; no reference assets.
+-->
+<article class="research-home">
+  <section class="research-intro" aria-labelledby="profile-title">
+    <div class="profile-identity">
+      <h1 id="profile-title">
+        {{ site.first_name }}
+        {{ site.last_name }}
+      </h1>
+      <div class="research-bio">{{ content }}</div>
+    </div>
+    {% if site.data.socials.email %}
+      <div class="profile-email">
+        <a href="mailto:{{ site.data.socials.email }}">{{ site.data.socials.email | replace: '@', ' [at] ' }}</a>
+        <button type="button" data-copy-email="{{ site.data.socials.email }}" aria-label="Copy email address" title="Copy email address">
+          <i class="ti ti-copy" aria-hidden="true"></i>
+        </button>
+        <span class="copy-status" role="status"></span>
+      </div>
+    {% endif %}
+    {% if page.profile.image %}
+      <div class="research-portrait">
+        {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+        {% include figure.liquid loading="eager" path=profile_image_path sizes="(max-width: 767px) 144px, 270px" alt="Nischay Patel" class="portrait-image" %}
+      </div>
+    {% endif %}
+  </section>
+
+  <section class="profile-highlights" aria-label="Academic highlights">
+    <p>
+      <strong>Highlights:</strong> Amgen Scholar, Tsinghua University (2025)
+      <span aria-hidden="true">&middot;</span> Poster presentation @ Kyoto University (2025)
+      <span aria-hidden="true">&middot;</span> 3 Peer-reviewed Research Papers
+      <span aria-hidden="true">&middot;</span> Best Poster (2025)
+      <span aria-hidden="true">&middot;</span> Ranjan Kumar Memorial Award (2026)
+    </p>
+  </section>
+
+  {% if page.selected_papers %}
+    <section class="research-section selected-research" aria-labelledby="publications-title">
+      <div class="research-section-heading">
+        <h2 id="publications-title">Selected research</h2>
+        <a href="{{ '/research/' | relative_url }}">All research <span aria-hidden="true">&rarr;</span></a>
+      </div>
+      {% bibliography --group_by none --template highlight_bib --query @*[selected=true]* %}
+    </section>
+  {% endif %}
+</article>

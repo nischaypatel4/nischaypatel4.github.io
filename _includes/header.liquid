@@ -1,0 +1,68 @@
+<header class="academic-header">
+  <nav id="navbar" aria-label="Primary navigation">
+    <div class="container academic-navigation">
+      <a class="sr-only" href="{{ '/' | relative_url }}">Nischay Patel home</a>
+      <div class="nav-profiles" aria-label="Academic and social profiles">
+        {% if site.data.socials.linkedin_username %}
+          <a href="https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}/" aria-label="LinkedIn" title="LinkedIn">
+            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+          </a>
+        {% endif %}
+        {% if site.data.socials.github_username %}
+          <a href="https://github.com/{{ site.data.socials.github_username }}" aria-label="GitHub" title="GitHub">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+          </a>
+        {% endif %}
+        {% if site.data.socials.scholar_userid %}
+          <a
+            href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}"
+            aria-label="Google Scholar"
+            title="Google Scholar"
+          >
+            <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+          </a>
+        {% endif %}
+        {% if site.data.socials.instagram_id %}
+          <a href="https://www.instagram.com/{{ site.data.socials.instagram_id }}/" aria-label="Instagram" title="Instagram">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          </a>
+        {% endif %}
+      </div>
+      <ul class="academic-nav-links">
+        {% for item in site.data.navigation %}
+          {% assign current = false %}
+          {% if page.url == item.url %}{% assign current = true %}{% endif %}
+          {% if item.title == 'Research' %}
+            {% if page.url contains '/publications/' or page.url contains '/projects/' %}{% assign current = true %}{% endif %}
+          {% elsif item.title == 'Writing' and page.url contains '/blog/' %}
+            {% assign current = true %}
+          {% endif %}
+          <li>
+            <a
+              href="{{ item.url | relative_url }}"
+              {% if current %}
+                class="active" aria-current="page"
+              {% endif %}
+            >
+              {{- item.title -}}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+      <div class="nav-tools">
+        {% if site.search_enabled %}
+          <button id="search-toggle" type="button" title="Search" aria-label="Search" onclick="openSearchModal()">
+            <i class="ti ti-search" aria-hidden="true"></i>
+          </button>
+        {% endif %}
+        {% if site.enable_darkmode %}
+          <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme">
+            <i class="ti ti-sun-moon" id="light-toggle-system" aria-hidden="true"></i>
+            <i class="ti ti-moon-filled" id="light-toggle-dark" aria-hidden="true"></i>
+            <i class="ti ti-sun-filled" id="light-toggle-light" aria-hidden="true"></i>
+          </button>
+        {% endif %}
+      </div>
+    </div>
+  </nav>
+</header>

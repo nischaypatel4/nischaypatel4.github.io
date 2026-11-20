@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <title>Multimodal modeling overview</title>
+  <rect width="360" height="240" fill="#f2f7f3"/>
+  <g fill="none" stroke="#236449" stroke-width="3">
+    <path d="M40 60V90M50 44V106M60 55V96M70 66V85"/>
+    <rect x="140" y="48" width="70" height="48" rx="3"/>
+    <path d="M168 60L168 84 190 72Z"/>
+    <path d="M275 52H325M275 66H318M275 80H325M275 94H308" stroke-width="2"/>
+    <path d="M55 143L180 173 300 143M180 143V173"/>
+  </g>
+  <g font-family="Arial,sans-serif" font-size="17" fill="#25332e" text-anchor="middle">
+    <text x="55" y="129">Audio</text><text x="180" y="129">Video</text>
+    <text x="300" y="129">Text</text><text x="180" y="198">Joint modeling</text>
+    <text x="180" y="224" font-size="12" fill="#5d6a64">Conceptual workflow, not experimental results</text>
+  </g>
+</svg>

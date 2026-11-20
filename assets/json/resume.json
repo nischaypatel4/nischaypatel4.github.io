@@ -1,0 +1,219 @@
+{
+  "basics": {
+    "name": "Nischay Patel",
+    "label": "Computational biology researcher",
+    "email": "nischaypatel4@gmail.com",
+    "url": "https://nischaypatel.com",
+    "summary": "Computational biology researcher applying statistical and machine-learning methods to single-cell, spatial, and transcriptomic data. My work includes representation-based cross-tissue comparison of cell states, latent-variable modeling of spatial cell-cell communication, and RNA-seq-based inference of gene-regulatory networks. I am interested in developing quantitative approaches to investigate genome regulation and disease mechanisms."
+  },
+  "education": [
+    {
+      "institution": "Indian Institute of Technology Kanpur",
+      "studyType": "Bachelor of Technology",
+      "area": "Biological Sciences and Bioengineering",
+      "minor": "Cognitive Science",
+      "startDate": "2022",
+      "endDate": "2026",
+      "period": "2022–2026",
+      "url": "https://iitk.ac.in/"
+    }
+  ],
+  "work": [
+    {
+      "name": "IIT Gandhinagar",
+      "position": "Research Intern · SRIP · Molecular Biology",
+      "supervisor": "Prof. Subramanian Sankaranarayanan",
+      "title": "DNA barcoding of Indian medicinal plants",
+      "url": "https://doi.org/10.7324/JABB.2025.209649",
+      "startDate": "2024-05",
+      "endDate": "2024-07",
+      "period": "May–Jul 2024",
+      "summary": "Developed nine DNA barcodes for Bougainvillea, Plumeria, and Dianthus using the matK marker, combining DNA extraction, primer design, PCR, Sanger sequencing, and phylogenetic analysis.",
+      "highlights": [
+        "Extracted plant DNA using DNeasy Plant Kit and CTAB methods, and designed matK-specific M13-tagged primers.",
+        "Performed gradient PCR optimization, gel-electrophoresis validation, and Sanger sequencing of purified PCR products.",
+        "Conducted sequence trimming, manual base-calling, quality checks, BLAST database searches, and phylogenetic analysis.",
+        "Analyzed nine samples revealing approximately 1–2.7% genetic polymorphism in matK."
+      ],
+      "keywords": ["DNA barcoding", "DNA extraction", "Primer design", "PCR", "Sanger sequencing", "Phylogenetics"]
+    },
+    {
+      "name": "IIT Gandhinagar",
+      "position": "Research Intern · Bioinformatics",
+      "supervisor": "Prof. Subramanian Sankaranarayanan",
+      "title": "Long non-coding RNAs in Arabidopsis pollination compatibility",
+      "url": "https://doi.org/10.3389/fpls.2026.1868651",
+      "startDate": "2024-12",
+      "endDate": "2026-07",
+      "period": "Dec 2024–Jul 2026",
+      "summary": "Designed an RNA-seq workflow for compatible and incompatible pollination in Arabidopsis, identifying 1,002 novel and 43 differentially expressed lncRNA loci and investigating potential regulatory interactions.",
+      "highlights": [
+        "Analyzed 12 pollination samples across 10- and 60-minute time points using HISAT2 alignment, StringTie assembly, coding-potential tests, Kallisto quantification, and DESeq2.",
+        "Identified 1,002 novel and 43 differentially expressed lncRNA loci, revealing potential cis- and trans-lncRNA–mRNA interactions.",
+        "Constructed lncRNA–mRNA–miRNA networks using Spearman correlation, LncTar, psRNATarget, and Cytoscape.",
+        "Used GO analysis to investigate stress-defense responses, pollen–stigma recognition, and self-incompatibility pathways."
+      ],
+      "keywords": ["RNA-seq", "Python", "R", "Bash/Shell", "DESeq2", "Galaxy", "Cytoscape", "Bioconductor", "NCBI SRA"]
+    },
+    {
+      "name": "Tsinghua University · Amgen Scholars Program",
+      "position": "Research Intern · Computational Genomics",
+      "supervisor": "Prof. Yinqing Li",
+      "title": "Comparative single-cell analysis of ACP and tooth development",
+      "url": "https://github.com/nischaypatel4/scRNA-ACP-pipeline",
+      "startDate": "2025-06",
+      "endDate": "2025-08",
+      "period": "Jun–Aug 2025",
+      "summary": "Built a single-cell RNA-seq workflow for 32,000 adamantinomatous craniopharyngioma (ACP) tumor cells and developed a cross-tissue transfer-learning approach to compare tumor states with tooth-developmental reference atlases.",
+      "highlights": [
+        "Integrated feature selection, PCA, clustering, and cell-type annotation for 32,000 ACP tumor cells.",
+        "Applied SCimilarity search using 128-dimensional triplet-loss embeddings trained on 23 million cells.",
+        "Developed a cross-tissue transfer-learning approach and identified tooth-related atlases as close matches for ACP tumor cells.",
+        "Used DESeq2 and GO enrichment to identify conserved WNT-signaling and morphogenesis pathways linking tumor states with odontogenic tissues."
+      ],
+      "keywords": ["scRNA-seq", "Python", "R", "Bash/Shell", "Scanpy", "Seurat", "Nextflow", "Docker"]
+    }
+  ],
+  "posters": [
+    {
+      "name": "Comparative single-cell analysis of adamantinomatous craniopharyngioma (ACP) and tooth development",
+      "year": "2025",
+      "venue": "Amgen Scholars Asia Symposium, Kyoto University; BSBE Day Symposium, IIT Kanpur",
+      "url": "https://drive.google.com/file/d/1sZRD0J-JnKjKQi50GQF6TywQSfAJNBMr/view?usp=drive_link"
+    },
+    {
+      "name": "DNA barcoding-based molecular profiling of Bougainvillea, Dianthus, and Plumeria using matK locus",
+      "year": "2024",
+      "venue": "Summer Research Internship Program (SRIP) Symposium, IIT Gandhinagar",
+      "url": "https://drive.google.com/file/d/11QFBBZcCqEYxwywoKdTKDQJmAM9u32QQ/view?usp=sharing"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Ranjan Kumar Memorial Award",
+      "date": "2026",
+      "awarder": "59th Convocation, IIT Kanpur",
+      "summary": "Best socially relevant project, for research in predicting and subtyping depression to enable personalized clinical interventions.",
+      "url": "https://drive.google.com/file/d/1NxUcZGproPPiiHUBgyKyvmVFFVa-16is/view?usp=sharing"
+    },
+    {
+      "title": "Best Poster Presentation (1st Prize) & Summer Innovation Awards",
+      "date": "2025",
+      "awarder": "BSBE Day Symposium, IIT Kanpur",
+      "summary": "Recognized for computational and AI-driven genomics research conducted at Tsinghua University.",
+      "url": "https://drive.google.com/file/d/1lHkd52Lnp-WlLcFw8OTE8Yd4l30Kqk7G/view?usp=sharing"
+    },
+    {
+      "title": "Academic Excellence Award",
+      "date": "2025",
+      "awarder": "IIT Kanpur",
+      "summary": "Recognized for scholastic and academic performance in Biological Sciences and Bioengineering during 2024–2025.",
+      "url": "https://drive.google.com/file/d/1dFkrH4JCyRcZ9b1Pnp6gW9TaHH-tRFM8/view?usp=sharing"
+    },
+    {
+      "title": "Amgen Scholars Program",
+      "date": "2025",
+      "awarder": "Tsinghua University, China",
+      "summary": "Fully funded international research scholarship.",
+      "url": "https://drive.google.com/file/d/10h6JUp_ckW2WdMI1Z2aSqWXDdRLLwtT8/view?usp=sharing"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Differential cell-cell communication inference using spatial transcriptomics",
+      "institution": "COSMIC Lab, IIT Kanpur",
+      "supervisor": "Prof. Hamim Zafar",
+      "startDate": "2025-08",
+      "endDate": "2025-11",
+      "period": "Aug–Nov 2025",
+      "url": "https://github.com/nischaypatel4/Multi-condition-differential-cell-cell-communication-inference-using-Spatial-Transcriptomics-Data",
+      "highlights": [
+        "Designed a multi-condition framework for differential cell-cell communication analysis from spatial transcriptomics data.",
+        "Adapted scDisInFact for ligand–receptor pairs to disentangle shared and cancer-specific features using latent-variable modeling.",
+        "Performed Mann–Whitney differential inference and model-based ΔLR scoring to quantify condition-driven changes.",
+        "Integrated spatial-proximity constraints through distance metrics and neighborhood embeddings."
+      ],
+      "keywords": ["Spatial transcriptomics", "Cell-cell communication", "Python", "R", "Bash/Shell", "PyTorch", "TensorFlow", "Docker"]
+    },
+    {
+      "name": "Reversal of sex-ratio distortion in a transgenic line of Aedes aegypti",
+      "institution": "Lab of Neural Systems, IIT Kanpur",
+      "supervisor": "Prof. Nitin Gupta",
+      "startDate": "2024-08",
+      "endDate": "2025-03",
+      "period": "Aug 2024–Mar 2025",
+      "url": "https://sites.google.com/site/labofneuralsystems/",
+      "highlights": [
+        "Analyzed potential transcription-factor binding sites at a transgenic insertion site using JASPAR.",
+        "Performed protein–DNA docking simulations to assess potential disruption of doublesex (dsx) transcription-factor binding.",
+        "Analyzed sequence-specific binding interactions for potential changes in dsx isoforms involved in sexual differentiation.",
+        "Designed primers and performed PCR of CRISPR-Cas9 off-target regions potentially linked to sex-ratio distortion."
+      ],
+      "keywords": ["Protein–DNA docking", "PCR", "Gel electrophoresis", "Primer design", "Python", "PyMOL"]
+    },
+    {
+      "name": "Multimodal prediction of depression subtypes",
+      "institution": "TRANSIT Lab, IIT Kanpur",
+      "supervisor": "Prof. Pragathi Balasubramani",
+      "startDate": "2025-06",
+      "endDate": "2025-12",
+      "period": "Jun–Dec 2025",
+      "url": "https://doi.org/10.1016/j.biosystems.2026.105887",
+      "highlights": [
+        "Designed a multimodal machine-learning pipeline integrating audio, video, and transcripts to predict mental-health outcomes including PTSD and depression.",
+        "Generated summary statistics and temporal representations, with Whisper-based speech transcripts and BERT embeddings.",
+        "Applied mutual-information feature selection, PCA, and SMOTE.",
+        "Used SHAP, sentiment analysis, radar plots, and correlations to investigate modality-specific predictive signals."
+      ],
+      "keywords": ["Python", "R", "PyTorch", "TensorFlow", "Hugging Face Transformers", "Machine learning", "Deep learning"]
+    }
+  ],
+  "coursework": [
+    {
+      "name": "Biological",
+      "courses": ["Bioinformatics & Computational Biology", "Biostatistics", "Computational Genomics", "Biotechnology"]
+    },
+    {
+      "name": "Quantitative",
+      "courses": ["Fundamentals of Computing", "Introduction to Machine Learning", "Linear Algebra", "Probability & Statistics"]
+    }
+  ],
+  "volunteer": [
+    {
+      "position": "Project Mentor",
+      "organization": "BioSoc, IIT Kanpur",
+      "period": "Apr–Dec 2024",
+      "url": "https://github.com/nischaypatel4/Computational-Methods-in-Biology",
+      "highlights": [
+        "Delivered seven lectures and tutorials on computational biology and bioinformatics tools and algorithms.",
+        "Led a team of 50 applying machine-learning approaches to biological datasets."
+      ]
+    },
+    {
+      "position": "Coordinator · Table Tennis",
+      "organization": "IIT Kanpur",
+      "period": "Jun 2024–Mar 2025",
+      "highlights": [
+        "Represented the institute table-tennis team; received a silver medal and best-upcoming-player recognition at inter-institute tournaments.",
+        "Coordinated logistics and execution of institute sports events involving multiple teams."
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "Prof. Subramanian Sankaranarayanan",
+      "institution": "IIT Gandhinagar",
+      "email": "s.sankar@iitgn.ac.in"
+    },
+    {
+      "name": "Prof. Pragathi Balasubramani",
+      "institution": "IIT Kanpur",
+      "email": "pbalasub@iitk.ac.in"
+    },
+    {
+      "name": "Prof. Nitin Gupta",
+      "institution": "IIT Kanpur",
+      "email": "guptan@iitk.ac.in"
+    }
+  ]
+}

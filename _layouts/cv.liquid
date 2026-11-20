@@ -1,0 +1,189 @@
+---
+layout: default
+---
+{% assign resume = site.data.resume %}
+<div class="post academic-cv">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.description %}
+      <p class="post-description">{{ page.description }}</p>
+    {% endif %}
+    {% if page.cv_pdf %}
+      {% if page.cv_pdf contains '://' %}
+        {% assign cv_url = page.cv_pdf %}
+      {% else %}
+        {% assign cv_url = page.cv_pdf | prepend: 'assets/pdf/' | relative_url %}
+      {% endif %}
+      <a class="cv-download" href="{{ cv_url }}">Download CV (PDF) <i class="fa-solid fa-file-pdf" aria-hidden="true"></i></a>
+    {% endif %}
+  </header>
+
+  {% if resume %}
+    <nav class="cv-navigation" aria-label="CV sections">
+      <a href="#education">Education</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+      <a href="#honors">Honors</a>
+      <a href="#projects">Projects</a>
+      <a href="#teaching">Teaching</a>
+    </nav>
+    <article>
+      <section class="cv-section" aria-labelledby="research-profile">
+        <h2 id="research-profile">Research profile</h2>
+        <p>{{ resume.basics.summary }}</p>
+        <p>
+          <a href="mailto:{{ resume.basics.email }}">{{ resume.basics.email }}</a> ·
+          <a href="{{ resume.basics.url }}">{{ resume.basics.url | remove: 'https://' }}</a>
+        </p>
+      </section>
+
+      <section class="cv-section" aria-labelledby="education">
+        <h2 id="education">Education</h2>
+        {% for education in resume.education %}
+          <div class="cv-entry">
+            <div class="cv-entry-heading">
+              <h3>
+                <a href="{{ education.url }}">{{ education.institution }}</a>
+              </h3>
+              <p class="cv-period">{{ education.period }}</p>
+            </div>
+            <p>
+              {{ education.studyType }} · {{ education.area -}}
+              <br>
+              Minor in {{ education.minor }}
+            </p>
+          </div>
+        {% endfor %}
+      </section>
+
+      <section class="cv-section" aria-labelledby="publications">
+        <h2 id="publications">Publications</h2>
+        <div class="publications">{% bibliography --group_by none %}</div>
+      </section>
+
+      <section class="cv-section" aria-labelledby="posters">
+        <h2 id="posters">Poster presentations</h2>
+        {% for poster in resume.posters %}
+          <div class="cv-entry">
+            <div class="cv-entry-heading">
+              <h3>
+                <a href="{{ poster.url }}">{{ poster.name }}</a>
+              </h3>
+              <p class="cv-period">{{ poster.year }}</p>
+            </div>
+            <p>{{ poster.venue }}</p>
+          </div>
+        {% endfor %}
+      </section>
+
+      <section class="cv-section" aria-labelledby="experience">
+        <h2 id="experience">Research experience</h2>
+        {% assign experiences = resume.work | reverse %}
+        {% for experience in experiences %}
+          <div class="cv-entry">
+            <div class="cv-entry-heading">
+              <h3>
+                <a href="{{ experience.url }}">{{ experience.title }}</a>
+              </h3>
+              <p class="cv-period">{{ experience.period }}</p>
+            </div>
+            <p class="cv-context">
+              {{ experience.name -}}
+              <br>
+              {{ experience.position }} · {{ experience.supervisor }}
+            </p>
+            <ul>
+              {% for highlight in experience.highlights %}
+                <li>{{ highlight }}</li>
+              {% endfor %}
+            </ul>
+            <p class="cv-methods"><strong>Methods &amp; tools:</strong> {{ experience.keywords | join: ', ' }}</p>
+          </div>
+        {% endfor %}
+      </section>
+
+      <section class="cv-section" aria-labelledby="honors">
+        <h2 id="honors">Honors &amp; awards</h2>
+        {% for award in resume.awards %}
+          <div class="cv-entry">
+            <div class="cv-entry-heading">
+              <h3>
+                <a href="{{ award.url }}">{{ award.title }}</a>
+              </h3>
+              <p class="cv-period">{{ award.date }}</p>
+            </div>
+            <p class="cv-context">{{ award.awarder }}</p>
+            <p>{{ award.summary }}</p>
+          </div>
+        {% endfor %}
+      </section>
+
+      <section class="cv-section" aria-labelledby="projects">
+        <h2 id="projects">Research projects</h2>
+        {% for project in resume.projects %}
+          <div class="cv-entry">
+            <div class="cv-entry-heading">
+              <h3>
+                <a href="{{ project.url }}">{{ project.name }}</a>
+              </h3>
+              <p class="cv-period">{{ project.period }}</p>
+            </div>
+            <p class="cv-context">{{ project.supervisor }} · {{ project.institution }}</p>
+            <ul>
+              {% for highlight in project.highlights %}
+                <li>{{ highlight }}</li>
+              {% endfor %}
+            </ul>
+            <p class="cv-methods"><strong>Methods &amp; tools:</strong> {{ project.keywords | join: ', ' }}</p>
+          </div>
+        {% endfor %}
+      </section>
+
+      <section class="cv-section" aria-labelledby="coursework">
+        <h2 id="coursework">Relevant coursework</h2>
+        {% for group in resume.coursework %}
+          <p>
+            <strong>{{ group.name }}:</strong> {{ group.courses | join: ', ' }}
+          </p>
+        {% endfor %}
+      </section>
+
+      <section class="cv-section" aria-labelledby="teaching">
+        <h2 id="teaching">Teaching &amp; leadership</h2>
+        {% for role in resume.volunteer %}
+          <div class="cv-entry">
+            <div class="cv-entry-heading">
+              <h3>
+                {% if role.url -%}
+                  <a href="{{ role.url }}">{{ role.position }}</a>
+                {%- else -%}
+                  {{- role.position -}}
+                {%- endif %}
+              </h3>
+              <p class="cv-period">{{ role.period }}</p>
+            </div>
+            <p class="cv-context">{{ role.organization }}</p>
+            <ul>
+              {% for highlight in role.highlights %}
+                <li>{{ highlight }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endfor %}
+      </section>
+
+      <section class="cv-section" aria-labelledby="references">
+        <h2 id="references">References</h2>
+        {% for reference in resume.references %}
+          <p>
+            <strong>{{ reference.name }}</strong> · {{ reference.institution -}}
+            <br>
+            <a href="mailto:{{ reference.email }}">{{ reference.email }}</a>
+          </p>
+        {% endfor %}
+      </section>
+    </article>
+  {% else %}
+    <p>The online CV could not be loaded. Please use the PDF above.</p>
+  {% endif %}
+</div>

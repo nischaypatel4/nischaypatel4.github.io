@@ -1,0 +1,24 @@
+---
+---
+<div class="publication-citation">
+  <h3>
+    <a href="https://doi.org/{{ entry.doi }}">{{ entry.title }}</a>
+  </h3>
+  <p class="publication-authors">
+    {% assign author_count = entry.author_array | size %}
+    {%- for author in entry.author_array limit: 3 -%}
+      {%- unless forloop.first %}, {% endunless -%}
+      {% if author.first == site.first_name and author.last contains site.last_name %}<em>{% endif -%}
+      {{ author.first }}
+      {{ author.last | remove: '*' }}
+      {%- if author.first == site.first_name and author.last contains site.last_name %}</em>{% endif -%}
+    {%- endfor -%}
+    {% if author_count > 3 %}, et al.{% endif %}
+  </p>
+  <p class="publication-venue">
+    <cite>{{ entry.journal }}</cite> · {{ entry.year }}
+    {% if entry.code %}
+      · <a href="{{ entry.code }}">Code</a>
+    {%- endif %}
+  </p>
+</div>
