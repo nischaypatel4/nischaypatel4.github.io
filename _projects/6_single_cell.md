@@ -27,4 +27,4 @@ The public **Nextflow DSL2** repository organizes ACP quality control and integr
 
 Presented as a poster at the **Amgen Scholars Asia Symposium, Kyoto University**, and the **BSBE Day Symposium, IIT Kanpur (2025)**. This work received the Best Poster Presentation (1st Prize) and Summer Innovation Awards at BSBE Day.
 
-[View the pipeline](https://github.com/nischaypatel4/scRNA-ACP-pipeline) · [View the poster](https://drive.google.com/file/d/1sZRD0J-JnKjKQi50GQF6TywQSfAJNBMr/view?usp=drive_link)
+[View the pipeline](https://github.com/nischaypatel4/scRNA-ACP-pipeline) · [View the poster](/posters/Amgen_Asia_Symposium_Kyoto_Poster.pdf)
