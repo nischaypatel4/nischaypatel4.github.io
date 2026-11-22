@@ -53,4 +53,22 @@ layout: default
       {% bibliography --group_by none --template highlight_bib --query @*[selected=true]* %}
     </section>
   {% endif %}
+      {% bibliography --group_by none --template highlight_bib --query @*[selected=true]* %}
+    </section>
+  {% endif %}
+
+  <section class="research-section" aria-labelledby="news-heading">
+    <div class="research-section-heading">
+      <h2 id="news-heading">News</h2>
+      <a href="{{ '/news/' | relative_url }}">All news <span aria-hidden="true">&rarr;</span></a>
+    </div>
+    <ol class="academic-updates">
+      {% for update in site.data.updates limit: 5 %}
+        <li>
+          <time>{{ update.period }}</time>
+          <div><a href="{{ update.url | relative_url }}">{{ update.title }}</a><p>{{ update.description }}</p></div>
+        </li>
+      {% endfor %}
+    </ol>
+  </section>
 </article>
